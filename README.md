@@ -14,5 +14,20 @@ The code if the sever side is in the `server.js` file and the client side is in 
 This project have:
 
 * `express.js`
-* Body-parcle
-* cors
+* `body-parser`
+* `cors`
+
+## Run The App
+
+you have to run the app after you install the dependencies you have to run this command line
+
+```
+node server.js
+```
+
+and then open the browser and go to this link:
+
+```
+http://localhost:3000/
+```
+
