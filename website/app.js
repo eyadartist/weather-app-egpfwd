@@ -3,13 +3,12 @@
 
 // Personal API Key for OpenWeatherMap API
 let baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip='
-let apiKey = ',us&appid=2d3027a75e0626f37d311271909d6d02';
+let apiKey = ',us&appid=2d3027a75e0626f37d311271909d6d02&units=metric';
 
 //  Create a new date
 
 let d = new Date();
 let newDate = d.getMonth() + 1 + '/' + d.getDate() + '/' + d.getFullYear();
-console.log(newDate)
 
 // Event listener to add function to existing HTML DOM element
 
@@ -46,7 +45,7 @@ const getWeather = async (baseURL, zipCoder, key) => {
         return weatherData;
     }
     catch (error) {
-        console.log("error", error);
+        console.log("Opps there is a bad error", error);
         // appropriately handle the error
     }
 };
@@ -82,6 +81,6 @@ const updateUI = async () => {
         document.getElementById('content').innerHTML = allData.content;
 
     } catch (error) {
-        console.log("error", error);
+        console.log("Opps there is a bad error", error);
     }
 }
