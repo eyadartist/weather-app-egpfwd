@@ -1,5 +1,5 @@
 /* Empty JS object to act as endpoint for all routes */
-projectData = {};
+const projectData = [];
 
 /* Express to run server and routes */
 const express = require('express');
@@ -37,9 +37,16 @@ function sendData(req, res) {
 app.post('/addWeather', addWeather);
 //create add Weather function
 function addWeather(req, res) {
-    projectData.date = req.body.date;
-    projectData.temperature = req.body.temperature;
-    projectData.content = req.body.content;
+    const temporary_object = {}
+
+    temporary_object.date = req.body.date;
+
+    temporary_object.temperature = req.body.temperature;
+
+    temporary_object.content = req.body.content;
+
+    projectData.push(temporary_object);
+
     res.send(projectData[projectData.length - 1]);
+
 }
-console.log(projectData);

@@ -29,11 +29,10 @@ function callBack(e) {
                 date: newDate,
                 temperature: data.main.temp,
                 content: content
-            })
+            }).then(
+                updateUI()
+            )
         })
-        .then(
-            updateUI()
-        )
 }
 
 /* Function to GET Web API Data*/
@@ -65,7 +64,6 @@ const postData = async (url = '', data = {}) => {
 
     try {
         const newData = await response.json();
-        console.log(newData);
         return newData;
     } catch (error) {
         console.log("oh! Looks ther is an error", error)
