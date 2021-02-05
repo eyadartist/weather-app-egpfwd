@@ -8,7 +8,7 @@ let apiKey = ',us&appid=2d3027a75e0626f37d311271909d6d02&units=metric';
 //  Create a new date
 
 let d = new Date();
-let newDate = d.getMonth() + 1 + '/' + d.getDate() + '/' + d.getFullYear();
+let newDate = d.getMonth() + 1 + '/' + d.getDate() + '/' + d.getFullYear() + "  |  " + d.getHours() + ":" + d.getMinutes();
 
 // Event listener to add function to existing HTML DOM element
 
@@ -24,7 +24,7 @@ function callBack(e) {
         // New Syntax!
         .then(function (data) {
             // Add data
-            console.log(data);
+            // console.log(data);
             postData('/addWeather', {
                 date: newDate,
                 temperature: data.main.temp,
@@ -53,6 +53,7 @@ const getWeather = async (baseURL, zipCoder, key) => {
 /* Function to POST data */
 
 const postData = async (url = '', data = {}) => {
+    console.log(data);
     const response = await fetch(url, {
         method: 'POST',
         credentials: 'same-origin',

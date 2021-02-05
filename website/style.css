@@ -134,7 +134,7 @@ textarea{
     font-size: 15px;
 }
 
-.button{
+button{
     height: 100px;
     margin: 25px;
     border-radius: 33px;
@@ -147,7 +147,7 @@ textarea{
     cursor: pointer;
     transition: ease-in-out .1s;
 }
-.button:hover {
+button:hover {
     background: #0066ff;
 }
 
