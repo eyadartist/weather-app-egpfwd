@@ -8,7 +8,7 @@ let apiKey = ',us&appid=2d3027a75e0626f37d311271909d6d02&units=metric';
 //  Create a new date
 
 let d = new Date();
-let newDate = d.getMonth() + 1 + '/' + d.getDate() + '/' + d.getFullYear() + "  |  " + d.getHours() + ":" + d.getMinutes();
+let newDate = d.getMonth() + 1 + '/' + d.getDate() + '/' + d.getFullYear() + " | " + d.getHours() + ":" + d.getMinutes();
 
 // Event listener to add function to existing HTML DOM element
 
