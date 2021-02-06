@@ -2,8 +2,8 @@
 // API Key: https://home.openweathermap.org/api_keys
 
 // Personal API Key for OpenWeatherMap API
-let baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip='
-let apiKey = ',us&appid=2d3027a75e0626f37d311271909d6d02&units=metric';
+const baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip='
+const apiKey = ',us&appid=2d3027a75e0626f37d311271909d6d02&units=metric';
 
 //  Create a new date
 
